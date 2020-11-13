@@ -27,7 +27,7 @@ test('disable triggers test', async () => {
         await firebase.clearFirestoreData({ projectId: APP_ID })
     });
 
-    // sleep tree seconds to allow triggers to run
+    // sleep three seconds to allow triggers to run
     await sleep(3000);
 
     const doc = await db.collection('bar').doc('bar').get();
